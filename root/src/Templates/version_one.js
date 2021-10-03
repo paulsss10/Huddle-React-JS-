@@ -26,7 +26,7 @@ const Version_one = () => {
           </p>
 
           <a href="#" className="register__cta button">
-            Request Invite
+            Register
           </a>
 
           <div className="social-media">
