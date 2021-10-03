@@ -1,0 +1,145 @@
+.versionOne {
+    padding-left: 0.0625rem;
+    padding-right: 0.0625rem;
+    background-image: url("../resources/bg-mobile.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    top: -7rem;
+    min-height: 26.5rem;
+
+    @include breakpoint-down(large) {
+        min-height: 47.5rem;
+        background-image: url("../resources/bg-mobile.svg");
+        
+    }
+
+    @include breakpoint-up(xlarge) {
+        background-image: url("../resources/bg-desktop.svg");
+        min-height: 47.5rem;
+        background-size: cover;
+        padding-left: 3.372rem;
+        padding-top: 2.4375rem;
+        padding-right: 3.372rem;
+        padding-bottom: 2.4375rem;  
+        
+    }
+
+    .container {
+        @include breakpoint-up(large) {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
+    &__images {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        @include breakpoint-up(large) {
+            min-width: 50%;
+        }
+
+        .logo {
+            margin-bottom: 3.75rem;
+            width: 50%;
+
+            @include breakpoint-up(large) {
+                max-width: 33%;
+            }
+        }
+
+        .hero-image {
+            width: 100%;
+
+            @include breakpoint-up(large) {
+                width: 100%;
+                
+            }
+
+        }
+    }
+
+    &__text {
+        @include breakpoint-down(large) {
+            text-align: center;
+            margin-top: 2.875rem;
+        }
+
+        @include breakpoint-up(large) {
+            text-align: left;
+            align-self: center;
+            margin-top: -4.225rem;
+            margin-left: 3rem;
+            
+        }
+
+        @media (min-width: 1023px) and (max-width: 1217px) {
+            margin-top: 5.775rem;
+        }
+        
+
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 1.75rem;
+
+            @include breakpoint-up(large) {
+                font-size: 2.5rem;
+            }
+        }
+
+        p {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.8;
+            font-size: 1.0625rem;
+        }
+    }
+
+    a {
+        padding: 0.9375rem 2.875rem;
+        background: #ffff;
+        border: none;
+        color: $violet;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        border-radius: 50px;
+        cursor: pointer;
+        display: inline-block;
+        font-weight: 400;
+        font-size: $font-sm;
+        // transition: opacity 300ms ease-in-out;
+        transition: all .1s ease-in-out;
+        text-decoration: none;
+        margin-top: 2.4375rem;
+        margin-bottom: 4.125rem;
+
+        @include breakpoint-down(medium) {
+            // width: 100%;
+        }
+
+        &:hover {
+            // opacity: 0.75;
+            // transition: all .1s ease-in-out;
+            transform: translateY(-5px);
+        }
+    }
+
+    .social-media {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        img {
+            margin: 0 0.59375rem;
+        }
+
+        @include breakpoint-up(large) {
+            justify-content: flex-end;
+            position: absolute;
+            bottom: 3.0625rem;
+            right: 4.1875rem;
+        }
+    }
+}
